@@ -1,0 +1,26 @@
+<h4 class="ui horizontal divider header"> Simple list of strings</h4>
+<div class="ui list" *ngFor="let c of cities"> {{ c }}</div>
+
+
+<h4 class="ui horizontal divider header">List of objects</h4>
+<table class="ui celled table">
+  <thead>
+    <tr><th>Name</th><th>Age</th><th>City</th></tr>
+  </thead>
+  <tr *ngFor="let p of people">
+    <td>{{ p.name }}</td> <td>{{ p.age }}</td> <td>{{ p.city }}</td>
+  </tr>
+</table>
+
+<div *ngFor="let personsByCity of peopleByCity; let num = index">
+  <h2 class="ui header">{{ personsByCity.city }}</h2>
+  <div *ngFor="let person of personsByCity.people">
+    {{ person.name }} + {{ num+1 }}
+  </div>
+</div>
+
+
+<div class='ngNonBindableDemo'>
+<span class="bordered">{{ content }}</span> <span class="pre" ngNonBindable>
+&larr; This is what {{ content }} rendered </span>
+</div>

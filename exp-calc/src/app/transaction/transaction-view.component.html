@@ -1,0 +1,40 @@
+<form class="ui large form segment">
+  <h3 class="ui header">Add a Transaction</h3>
+
+  <div class="field">
+    <label for="title">Title:</label>
+    <input id="title" #newtitle>
+  </div>
+
+  <div class="field">
+    <label for="category">Category:</label>
+    <input id="category" #newcategory>
+  </div>
+
+  <div class="field">
+    <label for="period">Period:</label>
+    <input id="period" #newperiod>
+  </div>
+
+  <div class="field">
+    <label for="value">Value:</label>
+    <input id="value" #newvalue>
+  </div>
+
+  <button (click)="exportJson()"
+          class="ui positive right floated button">
+    Export JSON
+  </button>
+
+  <button (click)="addArticle(newtitle, newcategory, newperiod, newvalue)"
+          class="ui positive right floated button">
+    Submit link
+  </button>
+</form>
+
+<div class="ui grid posts">
+  <transaction
+    *ngFor="let transaction of sortedTransactions()"
+    [transaction]="transaction">
+  </transaction>
+</div>

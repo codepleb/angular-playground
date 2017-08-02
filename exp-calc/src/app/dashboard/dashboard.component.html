@@ -1,0 +1,35 @@
+<div class="ui container">
+  <br>
+  <div class="ui secondary menu">
+    <div class="header item">ExpensesCalculator</div>
+
+
+
+    <!--<a class="active item">-->
+      <!--Overview-->
+    <!--</a>-->
+    <!--<a class="item">-->
+      <!--Statistics-->
+    <!--</a>-->
+    <!--<a class="item">-->
+      <!--Calculator-->
+    <!--</a>-->
+
+
+    <nav>
+      <a routerLink="/transactions" routerLinkActive="active">Overview</a>
+      <a routerLink="/statistics" routerLinkActive="active">Statistics</a>
+      <a routerLink="/calculator" routerLinkActive="active">Calculator</a>
+    </nav>
+
+
+    <div class="right menu">
+
+    </div>
+  </div>
+  <div class="ui divider"></div>
+  <br>
+  <div class="ui grid">
+    <router-outlet></router-outlet>
+  </div>
+</div>
